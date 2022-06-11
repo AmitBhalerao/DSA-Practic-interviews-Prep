@@ -1,5 +1,6 @@
 '''
-TC: O(2^n)
+TC: O(2^n) for Non-memoized code
+TC: O(n) as currentStair max value can be n. For memoised solution
 SC: O(n)
 '''
 
