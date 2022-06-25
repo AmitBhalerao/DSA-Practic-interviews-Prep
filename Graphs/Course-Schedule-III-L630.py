@@ -7,12 +7,12 @@ Solution: Max-heap approach to solve this
 
 Idea: Max-heap contains the duartion of courses possible so far. Root is basicallly course with max duration. If while iterating through sortedlist of courses, we came across course whose duration is less than max-duration of course in max-heap then we can add current course and remove earlier max-duration course from heap. 
 
-Max-heap time complexity Q(logN) so 
-
+Max-heap time complexity O(logN)
+so 
 TC: O(N*logN)
 SC: O(N)
-'''
 
+'''
 import heapq
 class Solution:
     def scheduleCourse(self, courses: List[List[int]]) -> int:
@@ -21,7 +21,7 @@ class Solution:
         
         heap = []
         time = 0
-        
+        #by default heapq is min-heap so multiplying by -1 to use it as Max-heap
         for course in sortedlist:
             if time + course[0] <= course[1]:
                 heapq.heappush(heap,-1*course[0])
