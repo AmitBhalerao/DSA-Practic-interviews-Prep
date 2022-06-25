@@ -31,7 +31,7 @@ class Solution:
                 heapq.heappush(heap, -1*course[0])
                 time += course[0] - (-1*removed)
         
-        return len(heap)
+        return len(heap) 
         
         
     
